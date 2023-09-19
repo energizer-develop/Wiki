@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getStorage, GalleryData } from 'apis/Gallery';
 import { useLocation } from 'react-router-dom';
-import DeleteGallery from 'components/DeleteGallery';
+import DeleteGallery from 'utils/deleteGallery';
 import styled from 'styled-components';
 import deleteIcon from '../../assets/icons/deleteIcon.png';
 import { media } from 'styles/media';
