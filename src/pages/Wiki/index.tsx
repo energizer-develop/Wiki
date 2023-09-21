@@ -88,26 +88,6 @@ const StyledTextareaContainer = styled.div`
     display: none;
   }
 
-  // ${media.desktop_lg(`
-  //   width: 35rem;
-  //   height: 40rem; 
-  // `)}
-  // ${media.tablet(`
-  //   width: 30rem;
-  //   height: 35rem;
-  // `)}
-  // ${media.tablet_680(`
-  //   width: 25rem;
-  //   height: 35rem;
-  // `)}
-  // ${media.tablet_625(`
-  //   width: 20rem;
-  //   height: 30rem;
-  // `)}
-  // ${media.mobile_430(`
-  //   width: 15rem;
-  //   height: 25rem;
-  // `)}
 `;
 
 export default Wiki;
