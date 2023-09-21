@@ -42,23 +42,21 @@ function Wiki() {
         setIsChanged={setIsChanged}
         isChange={isChange}
       ></NavigationWiki>
-      <div>
-        {isEdit ? (
-          <WikiCreate
-            setIsEdit={setIsEdit}
-            data={data}
-            selectedCategory={selectedCategory}
-          ></WikiCreate>
-        ) : (
-          <StyledTextareaContainer>
-            {isLoading ? (
-              <Loading></Loading>
-            ) : (
-              <WikiContent data={data} setIsEdit={setIsEdit} />
-            )}
-          </StyledTextareaContainer>
-        )}
-      </div>
+      {isEdit ? (
+        <WikiCreate
+          setIsEdit={setIsEdit}
+          data={data}
+          selectedCategory={selectedCategory}
+        ></WikiCreate>
+      ) : (
+        <StyledTextareaContainer>
+          {isLoading ? (
+            <Loading></Loading>
+          ) : (
+            <WikiContent data={data} setIsEdit={setIsEdit} />
+          )}
+        </StyledTextareaContainer>
+      )}
     </StyledWikiContainer>
   );
 }
@@ -66,13 +64,12 @@ function Wiki() {
 
 const StyledWikiContainer = styled.div`
   display: grid;
-  grid-template-columns: 0.2fr 0.8fr;
+  grid-template-columns: 0.2fr 1fr;
 `;
 
 
 const StyledTextareaContainer = styled.div`
   margin: 2rem;
-  position: relative;
 
   #markdownEditor {
     height: 100% !important;
@@ -91,61 +88,26 @@ const StyledTextareaContainer = styled.div`
     display: none;
   }
 
-  ${media.desktop_lg(`
-    width: 35rem;
-    height: 40rem; 
-  `)}
-  ${media.tablet(`
-    width: 30rem;
-    height: 35rem;
-  `)}
-  ${media.tablet_680(`
-    width: 25rem;
-    height: 35rem;
-  `)}
-  ${media.tablet_625(`
-    width: 20rem;
-    height: 30rem;
-  `)}
-  ${media.mobile_430(`
-    width: 15rem;
-    height: 25rem;
-  `)}
+  // ${media.desktop_lg(`
+  //   width: 35rem;
+  //   height: 40rem; 
+  // `)}
+  // ${media.tablet(`
+  //   width: 30rem;
+  //   height: 35rem;
+  // `)}
+  // ${media.tablet_680(`
+  //   width: 25rem;
+  //   height: 35rem;
+  // `)}
+  // ${media.tablet_625(`
+  //   width: 20rem;
+  //   height: 30rem;
+  // `)}
+  // ${media.mobile_430(`
+  //   width: 15rem;
+  //   height: 25rem;
+  // `)}
 `;
-
-// const StyledWikiNotExist = styled.div`
-//   font-size: 1.5rem;
-//   font-weight: 600;
-//   text-align: center;
-//   position: absolute;
-
-//   width: 100%;
-//   height: 100%;
-//   top: 50%;
-
-//   button {
-//     position: relative;
-//     color: #3584f4;
-//     font-size: 1rem;
-//     text-align: right;
-//     cursor: pointer;
-//   }
-
-//   ${media.desktop_lg(`
-//     font-size: 1.5rem;
-//   `)}
-//   ${media.tablet(`
-//     font-size: 1.25rem;
-//   `)}
-//   ${media.tablet_680(`
-//     font-size: 1rem;
-//   `)}
-//   ${media.tablet_625(`
-//     font-size: 0.75rem;
-//   `)}
-//   ${media.mobile_430(`
-//     font-size: 0.5rem;
-//   `)}
-// `;
 
 export default Wiki;
