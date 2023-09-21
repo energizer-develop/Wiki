@@ -98,10 +98,6 @@ const CategoryContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  li:hover {
-    font-weight: 700;
-    border-bottom: 2px solid #e2e8f0;
-  }
 `;
 
 const CategoryUl = styled.ul`
@@ -115,6 +111,10 @@ const CategoryUl = styled.ul`
     cursor: default;
   }
 
+  .selected_category {
+    font-weight: 700;
+    border-bottom: 2px solid #e2e8f0;
+  }
   li:hover {
     cursor: pointer;
   }
