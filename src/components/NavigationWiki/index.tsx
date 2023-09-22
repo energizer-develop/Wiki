@@ -84,8 +84,12 @@ const StyledCategoryUl = styled.ul`
   }
 
   span {
-    margin: 1rem;
+    margin-left: 0.5rem;
     cursor: default;
+
+    ${media.mobile_430(`
+      margin: 0;
+    `)}
   }
   
   span:hover {
@@ -109,7 +113,7 @@ const StyledCategoryUl = styled.ul`
     font-size: 0.5rem;
   `)}
   ${media.mobile_430(`
-    font-size: 0.4rem;
+    font-size: 0.3rem;
   `)}
 `;
 
