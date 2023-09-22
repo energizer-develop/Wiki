@@ -17,11 +17,14 @@ function WikiCreate({ setIsEdit, selectedCategory, data }: createProps) {
   const handleSetValue = (text: string | undefined) => {
     if (text) {
       setTextValue(text);
+    } else {
+      setTextValue('')
     }
   };
 
   const handleWikiContent = async () => {
-    if (textValue === '') {
+    const trimmedTextValue = textValue.trim()
+    if (textValue === '' || trimmedTextValue.length === 0) {
       alert('빈 내용은 등록하실 수 없습니다.');
       return;
     }
@@ -76,19 +79,6 @@ const StyledTextareaContainer = styled.div`
 
   #markdownEditor {
     height: 100% !important;
-  }
-
-  .document {
-    height: 100%;
-  }
-
-  .document .markdownViewer {
-    height: 100%;
-    overflow-y: scroll;
-  }
-
-  .document .markdownViewer::-webkit-scrollbar {
-    display: none;
   }
 
   ${media.desktop_lg(`

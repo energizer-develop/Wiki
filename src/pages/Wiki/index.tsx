@@ -72,23 +72,6 @@ const StyledTextareaContainer = styled.div`
   margin: 2rem;
   position: relative;
 
-  #markdownEditor {
-    height: 100% !important;
-  }
-
-  .document {
-    height: 100%;
-  }
-
-  .document .markdownViewer {
-    height: 100%;
-    overflow-y: scroll;
-  }
-
-  .document .markdownViewer::-webkit-scrollbar {
-    display: none;
-  }
-
   ${media.desktop_lg(`
     width: 35rem;
     height: 40rem; 

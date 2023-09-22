@@ -29,7 +29,7 @@ function NavigationWiki({ setIsChanged, isChange }: INavigationWikiProps) {
       <StyledCategoryContainer>
         {CATEGORY.map((category: ICategory, categoryIndex) => (
           <StyledCategoryUl key={categoryIndex}>
-            <h1>회사생활</h1>
+            <h1>{category.name}</h1>
             {category.info.map((info, infoIndex) => (
               <span
                 key={infoIndex}
@@ -84,8 +84,12 @@ const StyledCategoryUl = styled.ul`
   }
 
   span {
-    margin: 1rem;
+    margin-left: 0.5rem;
     cursor: default;
+
+    ${media.mobile_430(`
+      margin: 0;
+    `)}
   }
   
   span:hover {
@@ -109,7 +113,7 @@ const StyledCategoryUl = styled.ul`
     font-size: 0.5rem;
   `)}
   ${media.mobile_430(`
-    font-size: 0.4rem;
+    font-size: 0.3rem;
   `)}
 `;
 
