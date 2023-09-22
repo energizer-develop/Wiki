@@ -29,7 +29,7 @@ function NavigationWiki({ setIsChanged, isChange }: INavigationWikiProps) {
       <StyledCategoryContainer>
         {CATEGORY.map((category: ICategory, categoryIndex) => (
           <StyledCategoryUl key={categoryIndex}>
-            <h1>회사생활</h1>
+            <h1>{category.name}</h1>
             {category.info.map((info, infoIndex) => (
               <span
                 key={infoIndex}
