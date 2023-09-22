@@ -87,6 +87,23 @@ const StyledButtonContainer = styled.div`
 
 const StyledWikiContentContainer = styled.div`
   height: 100%;
+
+  .markdownViewer {
+    height: 80vh;
+    overflow-y: scroll;
+
+    ${media.tablet_680(`
+      height: 70vh;
+    `)}
+    ${media.mobile_430(`
+      height: 60vh;
+    `)}
+  }
+
+  .markdownViewer::-webkit-scrollbar {
+    display: none;
+  }
+
 `;
 const StyledWikiNotExistText = styled.div`
   display: flex;
