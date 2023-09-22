@@ -5,7 +5,6 @@ import {
   signInWithPopup,
 } from '@firebase/auth';
 import { auth } from 'apis/firebase';
-import { ALERT } from 'constants/common';
 
 export const login = async () => {
   try {
@@ -14,6 +13,5 @@ export const login = async () => {
     await signInWithPopup(auth, provider);
   } catch (error) {
     console.log(error);
-    alert(ALERT.ERROR);
   }
 };
