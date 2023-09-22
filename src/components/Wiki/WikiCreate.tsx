@@ -17,11 +17,14 @@ function WikiCreate({ setIsEdit, selectedCategory, data }: createProps) {
   const handleSetValue = (text: string | undefined) => {
     if (text) {
       setTextValue(text);
+    } else {
+      setTextValue('')
     }
   };
 
   const handleWikiContent = async () => {
-    if (textValue === '') {
+    const trimmedTextValue = textValue.trim()
+    if (textValue === '' || trimmedTextValue.length === 0) {
       alert('빈 내용은 등록하실 수 없습니다.');
       return;
     }
